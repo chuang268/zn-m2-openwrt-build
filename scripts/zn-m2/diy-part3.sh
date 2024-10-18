@@ -13,6 +13,7 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 sed -i 's/22/58371/g' package/network/services/dropbear/files/dropbear.config
+sed -i 's/#	list interpreter	".php=/usr/bin/php-cgi"/	list interpreter	".php=/usr/bin/php-cgi"/g' package/network/services/uhttpd/files/uhttpd.config
 
 # 替换golang版本为1.22
 rm -rf feeds/packages/lang/golang
