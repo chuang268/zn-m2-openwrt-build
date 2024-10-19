@@ -18,7 +18,6 @@ sed -i 's/#	list interpreter	".php=/usr/bin/php-cgi"/	list interpreter	".php=/us
 # 替换golang版本为1.22
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
-git clone https://github.com/xiaoxiao29/luci-app-adguardhome.git
 
 # design修改proxy链接
 sed -i -r "s#navbar_proxy = 'openclash'#navbar_proxy = 'passwall'#g" feeds/luci/themes/luci-theme-design/luasrc/view/themes/design/header.htm
